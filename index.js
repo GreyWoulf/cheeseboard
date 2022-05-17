@@ -13,7 +13,9 @@ User.hasMany(Board) // gives magic method for adding boards to user
 // Board and Cheese has many-to-many relationship
 // A board can have many cheeses
 // A cheese can be on many boards
-Cheese.belongsToMany(Board, {through : 'cheese_board'})
+
+Cheese.belongsToMany(Board, {through : 'board_cheese'})
 Board.hasMany(Cheese)
+
 
 module.exports = {User, Board, Cheese};
